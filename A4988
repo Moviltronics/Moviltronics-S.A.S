@@ -1,0 +1,22 @@
+# include  < Arduino.h > 
+# include  " A4988.h "
+
+// usando un motor de 200 pasos (el más común) 
+# define  MOTOR_STEPS  200 
+// configura los pines conectados 
+# define  DIR  8 
+# define  STEP  9 
+# define  MS1  10 
+# define  MS2  11 
+# define  MS3  12 
+A4988 stepper (MOTOR_STEPS, DIR, STEP , MS1, MS2, MS3);
+
+void  setup () {
+     // Establezca las RPM del motor de destino en 1 RPM y microstepping en 1 (modo de paso completo) 
+    paso a paso. comenzar ( 1 , 1 );
+}
+
+void  loop () {
+     // Dile al motor que gire 360 ​​grados. Eso es. 
+    paso a paso rotar ( 360 );
+}
